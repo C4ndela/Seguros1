@@ -47,14 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SegurosForm.cs">
+    <Compile Include="Lavadero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SegurosForm.Designer.cs">
-      <DependentUpon>SegurosForm.cs</DependentUpon>
+    <Compile Include="Lavadero.Designer.cs">
+      <DependentUpon>Lavadero.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Lavadero.resx">
+      <DependentUpon>Lavadero.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -64,9 +67,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SegurosForm.resx">
-      <DependentUpon>SegurosForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -81,6 +81,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{93b461f3-cc8f-4855-bac7-03511192d604}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{1ece8bbb-4ff2-40dc-9e8a-aaeea7ca9b93}</Project>
       <Name>Entidades</Name>
